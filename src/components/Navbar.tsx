@@ -52,9 +52,12 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-      <button className="md:block hidden w-24 h-12 bg-black text-white rounded-lg font-semibold hover:opacity-90 duration-100">
+      <a
+        href="#about"
+        className="md:block hidden bg-black text-white rounded-lg font-semibold hover:opacity-90 duration-100 px-5 py-3"
+      >
         Explore
-      </button>
+      </a>
       <button className="md:hidden block" onClick={() => toggle()}>
         {!isToggled && <FaBars className="w-6 h-6 text-white" />}
       </button>
@@ -108,9 +111,13 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="mt-8 w-24 h-12 bg-black text-white rounded-lg font-semibold hover:scale-105 active:scale-100 duration-100">
+          <a
+            onClick={() => toggle()}
+            href="#about"
+            className="mt-8 bg-black w-full text-center text-white rounded-lg font-semibold hover:scale-105 active:scale-100 duration-100 px-5 py-3"
+          >
             Explore
-          </button>
+          </a>
         </div>
       </div>
     </div>

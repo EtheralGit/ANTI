@@ -26,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -44,9 +44,6 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
             <BlurImage card={card} />
-            <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Click me
-            </div>
           </motion.div>
         </div>
       ))}
@@ -89,7 +86,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black opacity-20 z-10"
       />
       <motion.div
         initial={{
